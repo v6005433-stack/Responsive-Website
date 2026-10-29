@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   
+
+    <style>
+
+     *{
+        margin: 0;
+        padding: 0px;
+        box-sizing: border-box;
+     }
+     body{
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        background-color: #111;
+        line-height: 1.6;
+     }
+
+  
+
+
+     .hero{
+        position: relative;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        overflow: hidden;
+     }
+     
+     .hero-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.85)),url("img11.jpeg");
+        background-size: cover;
+        background-position: center;
+
+        background-repeat: no-repeat;
+     }
+     .hero-text{
+        position: relative;
+        max-width: 700px;
+
+      animation: tobi 3s ease both;
+     }
+     .hero-text h1{
+      font-size: 4rem;
+      margin-bottom: 15px;
+      color: #ffb703;
+     }
+
+
+     .hero-text p{
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+     }
+      
+     .btn{
+      display: inline-block;
+      padding: 14px 35px;
+      background-color: #ffb703;
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 50px;
+       transition: background 0.3s; 
+
+     }
+     .btn:hover{
+      background: orangered;
+     }
+     .cards{
+      padding: 80px 20px;
+     }
+     .cards-container{
+
+       max-width: 1000px;
+       margin: 0 auto;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        
+        
+     }
+
+     .card{
+      flex: 1 1 250px;
+      
+      border-radius: 15px;
+      padding: 20px 10px;
+      text-align: center;
+      background-image: url("img11.jpeg");
+
+      
+
+      animation: tobi 1s ease both;
+
+     }
+     .card:nth-child(1){animation-delay: 0.2s;}
+     .card:nth-child(2){animation-delay: 1.4s; }
+     .card:nth-child(3){animation-delay: 2s;}
+
+     .card-icon{
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      
+     }
+
+
+
+
+
+
+
+
+
+
+     @keyframes tobi{
+      from{
+         opacity: 0;
+         transform: translateX(40px);
+      }
+      to{
+         opacity: 1;
+         transform: translateX(20px);
+      }
+     
+      }
+
+
+
+        @media (max-width: 768px) {
+         .hero-text h1 {font-size: 2.5rem;}
+         .hero-text p{font-size: 1rem;}
+         .cards      {padding: 60px 20px;}
+        }
+        @media (max-width: 480px) {
+         .hero-text h1 {font-size: 2rem;}
+         .btn          {display: block; padding: 14px 20px;}
+         .card         {padding: 25px 20px;}
+        }
+           
+    
+
+    .bog{
+      color: #ffb703;
+      
+    }
+
+    .bog-a{
+      color: #ffb703;
+    }
+    .bog-b{
+    color: #ffb703;
+    }
+
+
+
+
+
+
+    </style>
+    
+</head>
+<body>
+
+<section class="hero">
+
+<div class="hero-bg"></div>
+
+<div class="hero-text">
+    <h1>Explore The Unknown</h1>
+    <p>And Became The King Of The Web By Following Emerging Technologies</p>
+     <a href="#cards" class="btn">Get Started</a>
+</div>
+</section>
+<section class="cards" id="cards">
+   <div class="cards-container">
+
+   <div class="card">
+      <div class="card-icon">Card One</div>
+      <div class="bog"><h3>Easy Animation</h3></div>
+      <p>Every element rises up from the bottom when the page loads
+      </p>
+    </div>
+
+      <div class="card">
+       <div class="card-icon">Card Two</div>
+       <div class="bog-a"><h3>Staggered</h3></div>
+       <p>Each Card Starts a litle later than the one before it
+       </p>
+      </div>
+
+      <div class="card">
+         <div class="card-icon">Card Three</div>
+         <div class="bog-b"><h3>Responsive</h3></div>
+         <p>The layout adjust automatically on tablet and phones.</p>
+      </div>
+
+
+    </div>
+
+
+
+
+</section>
+<h1 id="result"></h1>
+    
+</body>
+</html>
